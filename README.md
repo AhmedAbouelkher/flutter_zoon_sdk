@@ -24,8 +24,6 @@ import 'package:flutter_zoom_sdk/flutter_zoom_web.dart';
 - [x] Null Safety.
 - [x] Stream meeting status.
 - [x] Join meeting.
-- [x] Start an instant meeting for Login user.
-- [x] Start an meeting for Login user with Meeeting ID.
 - [x] Login Error with proper Error codes.
 - [x] Hide Title bar or Hide Meeting info (Useful for e-learning platform).
 - [x] Change Meeting Notification App Name & Zoom Notification Icon Removed.
@@ -67,7 +65,7 @@ Or in text format add the key:
 
 Disable BITCODE in the `ios/Podfile`:
 
-```
+```ruby
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     flutter_additional_ios_build_settings(target)
@@ -103,12 +101,12 @@ minSdkVersion 21
 
 To Change the Notification name copy the below code to `android/app/src/main/res/values/strings.xml` file
 
-```
+```xml
 <string name="app_name_zoom_local" >Your App Name</string> // Put your app name in here for notification.
 ```
 
 Disable shrinkResources for release buid
-```
+```gradle
    buildTypes {
         release {
             // TODO: Add your own signing config for the release build.
@@ -516,7 +514,7 @@ startMeeting(BuildContext context) {
 
 ### Start a Meeting - Login user
 
-```
+```dart
     var meetingOptions = new ZoomMeetingOptions(
         userId: '', //pass host email for zoom
         userPassword: '', // replace 'meetingPassword' with userPassword
@@ -533,7 +531,7 @@ startMeeting(BuildContext context) {
 
 ### ZoomView(onViewCreated: (controller) {}) --- Replaced with
 
-```
+```dart
      var zoom = ZoomView();
      // Initializing Zoom SDK
      zoom.initZoom(zoomOptions).then((results) {}
@@ -541,7 +539,7 @@ startMeeting(BuildContext context) {
 ```
 ### controller.zoomStatusEvents.listen((status) {}) -- Replaced With
 
-```
+```dart
     var zoom = ZoomView();
     zoom.initZoom(zoomOptions).then((results) {
         if(results[0] == 0){
@@ -556,12 +554,12 @@ startMeeting(BuildContext context) {
 
 ### Start mention function changed :-
 
-```
+```dart
     controller.login(this.widget.loginOptions).then((loginResult) {})
 
 ```
 
-```
+```dart
     var zoom = ZoomView();
     zoom.initZoom(zoomOptions).then((results) {
         if(results[0] == 0){

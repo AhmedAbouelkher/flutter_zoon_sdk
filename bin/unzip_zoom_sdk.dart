@@ -77,13 +77,15 @@ Future<void> downloadAndroid(String location) async {
   final androidCommonLibFile = location + '/android/libs/commonlib.aar';
   bool exists = await File(androidCommonLibFile).exists();
   if (!exists) {
-    await downloadFile(Uri.parse('https://www.dropbox.com/s/i5fww50elzrphra/commonlib.aar?dl=1'), androidCommonLibFile);
+    await downloadFile(
+        Uri.parse('https://www.dropbox.com/s/bzdp4qydybkjxlh/commonlib.aar?dl=0&raw=1'), androidCommonLibFile);
   }
 
   final androidRTCLibFile = location + '/android/libs/mobilertc.aar';
   exists = await File(androidRTCLibFile).exists();
   if (!exists) {
-    await downloadFile(Uri.parse('https://www.dropbox.com/s/ahh06pva216szc1/mobilertc.aar?dl=1'), androidRTCLibFile);
+    await downloadFile(
+        Uri.parse('https://www.dropbox.com/s/knhobkd4tilgzre/mobilertc.aar?dl=0&raw=1'), androidRTCLibFile);
   }
 }
 
