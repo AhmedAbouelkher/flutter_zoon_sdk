@@ -59,7 +59,7 @@ SPEC CHECKSUMS:
   better_player: 2406bfe8175203c7a46fa15f9d778d73b12e1646
   Cache: 4ca7e00363fca5455f26534e5607634c820ffc2d
   Flutter: 50d75fe2f02b26cc09d224853bb45737f8b3214a
-  flutter_zoom_sdk: 62caf74a6f8822790a98b2251bf7f4a7e2590057
+  flutter_zoom_sdk: d54ed35bec466f5c584962544ffafd7feec8bdb1
   GCDWebServer: 2c156a56c8226e2d5c0c3f208a3621ccffbe3ce4
   HLSCachingReverseProxyServer: 59935e1e0244ad7f3375d75b5ef46e8eb26ab181
   path_provider_ios: 14f3d2fd28c4fdb42f44e0f751d12861c43cee02
@@ -67,6 +67,6 @@ SPEC CHECKSUMS:
   PINOperation: 00c935935f1e8cf0d1e2d6b542e75b88fc3e5e20
   wakelock: d0fc7c864128eac40eba1617cb5264d9c940b46f
 
-PODFILE CHECKSUM: aafe91acc616949ddb318b77800a7f51bffa2a4c
+PODFILE CHECKSUM: 49fd4acf0cba634d45b7961ae4f24a19f48e31b7
 
 COCOAPODS: 1.11.2

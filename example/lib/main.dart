@@ -43,8 +43,8 @@ class _HomeScreenState extends State<HomeScreen> {
     _idController = TextEditingController();
     _passwordController = TextEditingController();
     if (kDebugMode) {
-      _idController.text = "782 8251 7260".replaceAll(" ", "");
-      _passwordController.text = "vbk0Ah";
+      _idController.text = "726 4798 7447".replaceAll(" ", "");
+      _passwordController.text = "x2t8Ux";
     }
 
     super.initState();
@@ -165,7 +165,7 @@ void joinMeeting(
         log("STATUS: $status");
         debugPrint("${"[Meeting Status Stream] : " + status[0]} - " + status[1]);
         if (_isMeetingEnded(status[0])) {
-          print("[Meeting Status] :- Ended");
+          debugPrint("[Meeting Status] :- Ended");
           timer.cancel();
         }
       });
@@ -180,6 +180,6 @@ void joinMeeting(
       });
     }
   }).catchError((error) {
-    print("[Error Generated] : " + error);
+    debugPrint("[Error Generated] : " + error);
   });
 }

@@ -9,36 +9,37 @@ import 'package:js/js.dart';
 
 /// needed along with factory constructor
 class InitParams {
-  external factory InitParams(
-      {leaveUrl,
-      showMeetingHeader,
-      disableInvite,
-      disableCallOut,
-      disableRecord,
-      disableJoinAudio,
-      audioPanelAlwaysOpen,
-      isSupportAV,
-      isSupportChat,
-      isSupportQA,
-      isSupportCC,
-      isSupportPolling,
-      isSupportBreakout,
-      screenShare,
-      rwcBackup,
-      videoDrag,
-      sharingMode,
-      videoHeader,
-      isLockBottom,
-      isSupportNonverbal,
-      isShowJoiningErrorDialog,
-      disablePreview,
-      disableCORP,
-      inviteUrlFormat,
-      disableVoIP,
-      disableReport,
-      meetingInfo,
-      success,
-      error});
+  external factory InitParams({
+    leaveUrl,
+    showMeetingHeader,
+    disableInvite,
+    disableCallOut,
+    disableRecord,
+    disableJoinAudio,
+    audioPanelAlwaysOpen,
+    isSupportAV,
+    isSupportChat,
+    isSupportQA,
+    isSupportCC,
+    isSupportPolling,
+    isSupportBreakout,
+    screenShare,
+    rwcBackup,
+    videoDrag,
+    sharingMode,
+    videoHeader,
+    isLockBottom,
+    isSupportNonverbal,
+    isShowJoiningErrorDialog,
+    disablePreview,
+    disableCORP,
+    inviteUrlFormat,
+    disableVoIP,
+    disableReport,
+    meetingInfo,
+    success,
+    error,
+  });
   external String get leaveUrl;
 }
 
@@ -48,8 +49,7 @@ class InitParams {
 
 /// needed along with factory constructor
 class JoinParams {
-  external factory JoinParams(
-      {meetingNumber, userName, signature, apiKey, passWord, success, error});
+  external factory JoinParams({meetingNumber, userName, signature, apiKey, passWord, success, error});
 }
 
 /// Signature helper
@@ -81,6 +81,5 @@ class ZoomMtg {
   external static void join(JoinParams joinParams);
   external static String generateSignature(SignatureParams signatureParams);
   external static dynamic checkSystemRequirements();
-  external static void inMeetingServiceListener(
-      String event, Function(MeetingStatus) callback);
+  external static void inMeetingServiceListener(String event, Function(MeetingStatus) callback);
 }
